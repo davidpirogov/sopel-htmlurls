@@ -145,7 +145,7 @@ def shutdown(bot: SopelWrapper) -> None:
 @plugin.rule(r".*")
 def handle_message(bot: SopelWrapper, trigger: Trigger) -> Union[None, int]:
     """
-    Gets the weather at a given location and returns the first result
+    Handles a message based on configured channels and rules
     """
 
     message_type = trigger.event
