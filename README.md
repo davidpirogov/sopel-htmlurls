@@ -83,7 +83,6 @@ newer urls take their place
 ### Alternative Configuration
 
 For those who don't like running interactive `sopel -w` you need to add to the default.cfg file
-the following with your OWM API Key or APPID
 
 ```ini
 [htmlurls]
