@@ -87,7 +87,7 @@ For those who don't like running interactive `sopel -w` you need to add to the d
 ```ini
 [htmlurls]
 template_file = ...path/to/your/sopel-htmlurls/sopel_htmlurls/template.html
-output_path = ...path/to/your/webserver/public/
+output_dir = ...path/to/your/webserver/public/
 allow_only_public_urls = True
 page_refresh_seconds = 30
 max_output_urls = 35
