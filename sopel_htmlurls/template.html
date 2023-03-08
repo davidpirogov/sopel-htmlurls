@@ -40,7 +40,12 @@
 
         @media (max-width: 576px) {
             .link-container {
-                overflow-x: scroll;
+                overflow: scroll;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                white-space: normal;
             }
         }
 
@@ -48,7 +53,7 @@
 </head>
 
 <body class="adaptive">
-    <div class="container-fluid link-container striped">
+    <div class="container-fluid striped">
         <div class="row row-underline-heading">
             <div class="col col-sm-6 col-lg-2">
                 <h5>Nickname</h5>
@@ -63,7 +68,7 @@
             <div class="col-6 col-md-2">{{ link.nick }}</div>
             <div class="col-6 col-md-2 timestamp" data-timestamp="{{ link.time | datetime("%Y-%m-%dT%H:%M:%SZ") }}">{{
                 link.time | datetime("%Y-%m-%dT%H:%M:%SZ") }}</div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 link-container">
                 <a rel="noopener noreferrer" target="_blank" href="{{ link.url }}">{{ link.url }}</a>
             </div>
         </div>
